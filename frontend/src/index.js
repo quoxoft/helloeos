@@ -1,6 +1,8 @@
 
 const CONTRACT_NAME = 'helloeos'
-const NETWORK = 'http://127.0.0.1:8888'
+const LOCAL_TESTNET= 'http://127.0.0.1:8888'
+const JUNGLE_TESTNET = 'http://dev.cryptolions.io:38888'
+const MAINNET = 'http://mainnet.libertyblock.io:8888'
 
 Eos = require('eosjs')
 
@@ -10,10 +12,10 @@ function getEos() {
     var privateKey = document.getElementById('private_key').value;
         var config = {
             keyProvider: [privateKey],
-            httpEndpoint: NETWORK,
+            httpEndpoint: JUNGLE_TESTNET,
             broadcast: true,
             sign: true,
-            chainId: null,
+            chainId: '038f4b0fc8ff18a4f0842a8f0564611f6e96e8535901dd45e43ac8691a1c4dca',
             expireInSeconds: 60
         }
         return Eos(config);
