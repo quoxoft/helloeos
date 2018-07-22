@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Hello World EOS</title>
+        <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    </head>
+    <body class="container">      
+            <h1 class="text-center">A Simple Dapp to write your message to EOS blockchain</h1>
+            <h3 class="text-center">This Dapp only works on EOS Jungle Testnet</h3>
+
+            <div class="form-group">
+                <label for="eos_message"><strong>Your Message</strong></label>
+                <input id="eos_message" class="form-control" placeholder="Your message">
+            </div>
+
+            <div class="form-group">
+                <label for="eos_account"><strong>Account Name</strong></label>
+                <input id="eos_account" class="form-control" placeholder="EOS Account">
+            </div>
+                
+            <div class="form-group">
+                <label>Private Key</label>
+                <input id="private_key" class="form-control" placeholder="Private key">
+                <a class="btn btn-primary" href="#" onclick="writeMessage()">Write Message</a>
+                <a class="btn btn-warning" href="#" onclick="removeMessage()">Delete Message</a>
+            </div>
+            <div class="form-group">
+                <div id="msg-warning" class="alert alert-warning" ></div>
+                <div id="msg-success" class="alert alert-success" role="alert"></div>
+
+            </div>
+            <table id="block_messages" class="table">
+                    <thead><tr>
+                        <th>Account</th>
+                        <th>Message</th>
+                    </tr></thead>
+                    <tbody></tbody>
+            </table>
+        <div id="app"></div>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+        <script src="/bundle.js"></script>
+    </body>
+</html>

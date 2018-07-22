@@ -1,0 +1,1 @@
+Please refer detailed at quoxoft.com
