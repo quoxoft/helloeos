@@ -27,7 +27,7 @@ void hello::writemessage(account_name username, std::string msg ) {
   require_auth(username);
   auto user = _usernames.find( username );
   eosio_assert( user == _usernames.end(), "username already exists" );
-    _usernames.emplace( _self, [&]( auto& s ) {
+    _usernames.emplace( username, [&]( auto& s ) {
       s.owner = username;
       s.message = msg;
     });
